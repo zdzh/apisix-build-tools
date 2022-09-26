@@ -200,8 +200,7 @@ jobs:
       - run:
           name: Download  openresty-pcre openresty-zlib
           command: |
-            wget https://openresty.org/package/centos/openresty.repo
-            mv openresty.repo /etc/yum.repos.d/
+            wget -O /etc/yum.repos.d/openresty.repo https://openresty.org/package/centos/openresty.repo
             yum check-update
             echo "download openresty-pcre and openresty-zlib"
             yum reinstall --downloadonly --downloaddir=/tmp/ openresty-pcre openresty-zlib
