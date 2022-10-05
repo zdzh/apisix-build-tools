@@ -9,7 +9,6 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     machine:
       image: ubuntu-2004:202101-01
-    resource_class: arm.medium
     environment:
       - TEST_VERSION: 0-latest
     steps:
@@ -55,7 +54,6 @@ jobs:
   build-and-push-apisix-base-dev-arm:
     machine:
       image: ubuntu-2004:202101-01
-    resource_class: arm.medium
 
     steps:
       - checkout
@@ -123,7 +121,6 @@ jobs:
         type: string
     machine:
       image: ubuntu-2004:202101-01
-    resource_class: arm.medium
     environment:
       - VAR_WORKBENCH_DIR: /tmp/output
     
